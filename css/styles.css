@@ -1,0 +1,154 @@
+:root {
+  --bg: #010101;
+  --primary: #0d969b;
+  --second: rgb(0, 106, 133);
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  border: none;
+  outline: none;
+}
+body {
+  font-family: sans-serif;
+  background-color: var(--bg);
+  color: white;
+}
+html {
+  scroll-behavior: smooth;
+}
+
+/* ===== HOME PAGE ===== */
+/* Navbar */
+.navbar {
+  position: fixed;
+}
+.navbar {
+  display: flex;
+  background-color: rgba(1, 1, 1, 0.8);
+  padding: 2rem;
+  justify-content: space-between;
+  width: 100%;
+  border-bottom: 1px solid var(--second);
+  border-top: 1px solid var(--second);
+  font-size: 23px;
+  z-index: 1000;
+}
+.navbar .navbar-items a {
+  margin: 0 1rem;
+}
+.navbar .judul {
+  font-size: 30px;
+  cursor: default;
+  font-style: italic;
+  font-weight: bold;
+}
+.navbar a {
+  color: white;
+}
+.navbar .navbar-items a:hover {
+  color: var(--second);
+}
+/* Hero Section */
+
+.hero {
+  background-image: url("../img/rahul-mishra-o4SzxPgMwV8-unsplash.jpg");
+  min-height: 100vh;
+  align-items: center;
+  justify-content: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  mask-image: linear-gradient(rgba(0, 0, 0, 1) 80%, rgba(0, 0, 0, 0));
+  margin-bottom: 5rem;
+  background-color: rgba(1, 1, 1, 0);
+}
+.hero .content {
+  position: fixed;
+  top: 15rem;
+  font-size: 2.5rem;
+  text-align: center;
+  font-weight: bolder;
+}
+.hero .content p {
+  margin-top: 1.2rem;
+  font-size: 2.3rem;
+}
+
+/* Hero Section-2 */
+
+.hero-2 {
+  align-items: center;
+  text-align: center;
+}
+.hero-2 h1 {
+  margin-bottom: 1.4rem;
+  font-size: 40px;
+  font-style: italic;
+}
+.hero-2 .img-judul img {
+  width: 30rem;
+  border-radius: 30%;
+  border: 2px solid var(--second);
+}
+.hero-2 .img-isi img:hover {
+  opacity: 0.5;
+}
+.hero-2 .img-isi .gambar {
+  width: 17rem;
+  margin: 8rem 5rem;
+}
+.hero-2 .isi-text {
+  font-size: 2rem;
+}
+.hero-2 .isi-text .html {
+  color: red;
+}
+.hero-2 .isi-text .css {
+  color: blue;
+}
+.hero-2 .isi-text .php {
+  color: rgb(68, 16, 165);
+}
+.hero-2 .isi-text .js {
+  color: yellow;
+}
+/* ===== CONTACT US PAGE ===== */
+.about {
+  flex-wrap: wrap;
+}
+/* copyright */
+footer .copyright {
+  position: relative;
+  font-size: 1.4rem;
+  padding: 2.5rem;
+  background-color: var(--second);
+  margin-top: 4rem;
+  bottom: 0;
+  text-align: center;
+}
+/* MEDIA QUERIES */
+
+/* Laptop */
+@media (max-width: 1366px) {
+  html {
+    font-size: 75%;
+  }
+}
+/* Tablet */
+@media (max-width: 768px) {
+  html {
+    font-size: 62.5%;
+    .navbar-items {
+      display: none;
+    }
+  }
+}
+/* Mobile */
+@media (max-width: 450px) {
+  html {
+    font-size: 55%;
+  }
+}
