@@ -1,7 +1,7 @@
 :root {
   --bg: #010101;
   --primary: #0d969b;
-  --second: rgb(0, 106, 133);
+  --second: #006a85;
 }
 * {
   margin: 0;
@@ -12,7 +12,7 @@
   outline: none;
 }
 body {
-  font-family: sans-serif;
+  font-family: poppins, sans-serif;
   background-color: var(--bg);
   color: white;
 }
@@ -28,7 +28,7 @@ html {
 .navbar {
   display: flex;
   background-color: rgba(1, 1, 1, 0.8);
-  padding: 2rem;
+  padding: 3rem;
   justify-content: space-between;
   width: 100%;
   border-bottom: 1px solid var(--second);
@@ -51,6 +51,7 @@ html {
 .navbar .navbar-items a:hover {
   color: var(--second);
 }
+
 /* Hero Section */
 
 .hero {
@@ -63,7 +64,10 @@ html {
   background-position: center;
   mask-image: linear-gradient(rgba(0, 0, 0, 1) 80%, rgba(0, 0, 0, 0));
   margin-bottom: 5rem;
-  background-color: rgba(1, 1, 1, 0);
+}
+.hero .content h1 {
+  color: var(--primary);
+  text-shadow: 1px 1px 1px white;
 }
 .hero .content {
   position: fixed;
@@ -75,6 +79,10 @@ html {
 .hero .content p {
   margin-top: 1.2rem;
   font-size: 2.3rem;
+  font-weight: 500;
+  color: whitesmoke;
+  font-weight: lighter;
+  padding: 50px;
 }
 
 /* Hero Section-2 */
@@ -84,9 +92,11 @@ html {
   text-align: center;
 }
 .hero-2 h1 {
-  margin-bottom: 1.4rem;
-  font-size: 40px;
+  margin-bottom: 5rem;
+  font-size: 5rem;
   font-style: italic;
+  color: var(--second);
+  text-shadow: 1px 1px 1px white;
 }
 .hero-2 .img-judul img {
   width: 30rem;
@@ -102,6 +112,7 @@ html {
 }
 .hero-2 .isi-text {
   font-size: 2rem;
+  padding: 50px;
 }
 .hero-2 .isi-text .html {
   color: red;
@@ -115,9 +126,85 @@ html {
 .hero-2 .isi-text .js {
   color: yellow;
 }
-/* ===== CONTACT US PAGE ===== */
-.about {
-  flex-wrap: wrap;
+/* CONTACT */
+.contact-section {
+  width: 100%;
+  padding: 10rem 10rem;
+  background: linear-gradient(#0d969b, #0d969b) padding-box, linear-gradient(145deg, transparent 40%, #010101, #006a85) border-box;
+  border: 2px solid transparent;
+  display: flex;
+  font-size: 14px;
+  flex-direction: column;
+  border-radius: 16px;
+  gap: 20px;
+}
+.contact-section h1 {
+  font-size: 5rem;
+  color: var(--second);
+  text-shadow: 1px 1px 1px white;
+}
+.contact-section .form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.contact-section button:active {
+  scale: 0.8;
+}
+.contact-section .form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+.contact-section .form-group label {
+  display: block;
+  margin-bottom: 1.7rem;
+  font-weight: 600;
+  font-size: 1.6rem;
+}
+.contact-section .form-group input {
+  width: 100%;
+  padding: 12px 16px;
+  border-radius: 8px;
+  background-color: transparent;
+  color: #fff;
+  border: 1px solid #efefef;
+}
+.contact-section .form-group textarea {
+  width: 100%;
+  padding: 12px 16px;
+  border-radius: 8px;
+  resize: none;
+  color: #fff;
+  height: 10rem;
+  border: 1px solid #efefef;
+  background-color: transparent;
+}
+.contact-section .form-group input::placeholder {
+  opacity: 0.95;
+}
+.contact-section .form-group input:focus {
+  outline: none;
+  border-color: #0011ff;
+}
+.contact-section .submit {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  align-self: flex-start;
+  color: #efefef;
+  font-weight: 700;
+  width: 25%;
+  background: var(--second);
+  border: 1px solid #efefef;
+  padding: 6px 16px;
+  gap: 10px;
+  margin-top: 1.5rem;
+  cursor: pointer;
+  border-radius: 6px;
+}
+.contact-section .submit:hover {
+  background-color: #0d103d;
 }
 /* copyright */
 footer .copyright {
@@ -141,9 +228,9 @@ footer .copyright {
 @media (max-width: 768px) {
   html {
     font-size: 62.5%;
-    .navbar-items {
-      display: none;
-    }
+  }
+  .navbar-items {
+    display: none;
   }
 }
 /* Mobile */

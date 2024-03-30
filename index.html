@@ -3,6 +3,11 @@
   <head>
     <!-- Link CSS -->
     <link rel="stylesheet" href="css/styles.css" />
+    <!-- poppins font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,400;0,600;1,200&display=swap" rel="stylesheet" />
+    <!-- title -->
     <title>Zainul Portofolio</title>
   </head>
   <body>
@@ -10,9 +15,9 @@
     <nav class="navbar">
       <a href="" class="judul">Welcome TO My Portofolio</a>
       <div class="navbar-items">
-        <a href="#home" class="item" style="color: #0d969b">Home</a>
-        <a href="page/my-project.html" class="item">My Project</a>
-        <a href="page/contact-us.html" class="item">Contact Us</a>
+        <a href="#home" class="item">Home</a>
+        <a href="" class="item">My Project</a>
+        <a href="#contact" class="item">Contact Us</a>
       </div>
     </nav>
     <!-- Navbar-End -->
@@ -41,10 +46,32 @@
       </div>
     </section>
     <!-- Hero-2 Section-End -->
+    <!-- Contact Section-Start -->
+    <section class="contact-section" id="contact">
+      <h1>Contact Us</h1>
+      <form action="" class="form">
+        <div class="form-group">
+          <label for="username">Masukkan Username</label>
+          <input type="text" id="username" placeholder="Username" />
+        </div>
+        <div class="form-group">
+          <label for="email">Masukkan Email</label>
+          <input type="email" id="email" placeholder="Email" />
+        </div>
+        <div class="form-group">
+          <label for="pesan">Kirim Pesan</label>
+          <textarea name="pesan" id="pesan" rows="10" cols="50" placeholder="Pesanmu"></textarea>
+        </div>
+        <button class="submit" type="submit" onclick="kirimPesan()">Kirim</button>
+      </form>
+    </section>
+    <!-- Contact Section-End -->
     <!-- Footer-start -->
     <footer class="footer">
       <div class="copyright">Copyright&copy; 2024 Achmad Zainul Arif</div>
     </footer>
     <!-- Footer-end -->
+    <!-- JavaScript -->
+    <script src="script/script.js"></script>
   </body>
 </html>
