@@ -39,6 +39,9 @@ html {
 .navbar .navbar-items a {
   margin: 0 1rem;
 }
+.navbar .navbar-items {
+  margin-left: 40rem;
+}
 .navbar .judul {
   font-size: 30px;
   cursor: default;
@@ -50,6 +53,9 @@ html {
 }
 .navbar .navbar-items a:hover {
   color: var(--second);
+}
+.navbar .navbar-extra #menu {
+  display: none;
 }
 
 /* Hero Section */
@@ -183,18 +189,16 @@ html {
 .contact-section .form-group input::placeholder {
   opacity: 0.95;
 }
-.contact-section .form-group input:focus {
+.contact-section .form-group input:focus,
+.contact-section .form-group textarea:focus {
   outline: none;
   border-color: #0011ff;
 }
 .contact-section .submit {
-  display: flex;
-  align-items: flex-start;
-  justify-content: center;
-  align-self: flex-start;
+  text-align: center;
   color: #efefef;
   font-weight: 700;
-  width: 25%;
+  width: 10rem;
   background: var(--second);
   border: 1px solid #efefef;
   padding: 6px 16px;
@@ -205,6 +209,25 @@ html {
 }
 .contact-section .submit:hover {
   background-color: #0d103d;
+}
+.contact-section .my-alert {
+  padding: 1rem;
+  justify-content: space-between;
+  background-color: var(--second);
+  border: 1px solid white;
+  border-radius: 5px;
+}
+.contact-section .icon a {
+  color: white;
+}
+.contact-section .icon a:hover {
+  opacity: 60%;
+}
+.d-none {
+  display: none;
+}
+.d-flex{
+  display: flex;
 }
 /* copyright */
 footer .copyright {
@@ -229,8 +252,40 @@ footer .copyright {
   html {
     font-size: 62.5%;
   }
-  .navbar-items {
-    display: none;
+  .navbar .judul {
+    font-size: 23px;
+  }
+  .navbar .navbar-items {
+    position: absolute;
+    top: 100%;
+    right: -100%;
+    background-color: rgba(1, 1, 1, 0.9);
+    border: 1px solid var(--second);
+    width: 30rem;
+    height: 20rem;
+    transition: 0.3s;
+  }
+  .navbar .navbar-items.active {
+    right: 0;
+  }
+  .navbar .navbar-extra #menu {
+    display: inline-block;
+    margin-top: 1rem;
+  }
+  .navbar .navbar-extra #menu:hover {
+    opacity: 80%;
+  }
+  .navbar .navbar-items a {
+    display: flex;
+    margin-bottom: 4rem;
+  }
+  /* .navbar .navbar-items .by{
+    margin-top: 30rem;
+    text-align: center;
+    font-size: 14px;
+  } */
+  .contact-section h1 {
+    font-size: 30px;
   }
 }
 /* Mobile */
