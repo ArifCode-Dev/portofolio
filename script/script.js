@@ -13,10 +13,10 @@ document.addEventListener("click", function (e) {
   }
 });
 // tampilkan under contruction
-document.querySelector("#maintenance").onclick = (e) => {
-  alert("under contruction!");
-  e.preventDefault();
-};
+// document.querySelector("#maintenance").onclick = (e) => {
+//   alert("under contruction!");
+//   e.preventDefault();
+// };
 // data base - google sheets
 const scriptURL = "https://script.google.com/macros/s/AKfycbyrhKwwuAj8_2JgE0T5h_W-XUkkqQDZVvV73CNk4nnQu_0l8bI3iUHENbkorfddfYfs/exec";
 const form = document.forms["submit-to-google-sheet"];
@@ -43,11 +43,10 @@ form.addEventListener("submit", (e) => {
         myAlert.classList.toggle("d-none");
         myAlert.classList.toggle("d-flex");
         e.preventDefault();
-      }
+      };
       // reset form
       form.reset();
       console.log("Success!", response);
     })
     .catch((error) => console.error("Error!", error.message));
 });
-
