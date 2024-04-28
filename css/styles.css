@@ -128,7 +128,7 @@ html {
   color: red;
 }
 .hero-2 .isi-text .css {
-  color: blue;
+  color: rgb(47, 147, 240);
 }
 .hero-2 .isi-text .php {
   color: rgb(68, 16, 165);
@@ -138,6 +138,9 @@ html {
 }
 .hero-2 .isi-text .sheet {
   color: rgb(0, 255, 13);
+}
+.hero-2 .isi-text .py {
+  color: #0400ff;
 }
 .hero-2 .isi-text .s {
   font-size: 3rem;
